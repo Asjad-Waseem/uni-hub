@@ -5,6 +5,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "types": ["@testing-library/jest-dom"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -18,8 +19,20 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@api/*": ["api/*"],
+      "@assets/*": ["assets/*"],
+      "@components": ["components/index"], // Points directly to the index file
+      "@components/*": ["components/*/index", "components/*"],
+      "@constants/*": ["constants/*"],
+      "@pages": ["pages/index"], // Points directly to the index file
+      "@pages/*": ["pages/*/index", "pages/*"], // Handles nested index.tsx and other files
+      "@sections/*": ["sections/*"],
+      "@utils/*": ["utils/*"]
+    }
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "include": ["./src/**/**.*"]
 }

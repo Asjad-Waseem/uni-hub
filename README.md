@@ -1,4 +1,31 @@
-# React + TypeScript + Vite
+# NODE VERSION
+
+- The project uses Node 20.12.2 version, so please ensure you use the same as a good practice.
+
+# INSTALLING THE DEPENDENCIES
+
+- For npm, use the command "npm install" or "npm i" to install the dependencies.
+- For yarn, use the command "yarn install" or "yarn i" or "yarn".
+
+# RUNNING THE CODE
+
+- After you have successfully installed the dependencies, run the command "npm run dev" if you are using npm or alternatively, use "yarn run dev" if you are using yarn.
+
+# BUILDING THE PROJECT
+
+- To build the project, use "npm run build" or alternatively you can use "yarn build" if you are using yarn.
+
+# RUNNING THE UNIT TESTS IN JEST/REACT-TESTING LIBRARY
+
+- For executing the unit tests, use the command "npm test" or "npm run test" to run all the unit tests.
+
+We have also added sonarqube report to illustrate code coverage in our codebase.
+
+# RUNNING THE LINTING TEST
+
+- To run the eslint test, use the command "npm run lint" or alternatively use "yarn lint" if you are using yarn.
+
+# THESE ARE ALL AUTO GENERATED PROJECT DETAILS: React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -17,12 +44,12 @@ If you are developing a production application, we recommend updating the config
 export default {
   // other rules...
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: ["./tsconfig.json", "./tsconfig.node.json"],
     tsconfigRootDir: __dirname,
   },
-}
+};
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
