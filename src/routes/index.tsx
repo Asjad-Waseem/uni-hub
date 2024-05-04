@@ -9,7 +9,7 @@ export default function Router() {
       index: true,
     },
     {
-      path: "university/details/:id", // Detail view for a specific university
+      path: "/university-details/:id", // Detail view for a specific university
       element: <DetailsPage />,
     },
     {

@@ -1,0 +1,30 @@
+.header {
+  display: flex; /* This turns .header into a flex container */
+  flex-direction: row;
+  align-items: center; /* This vertically centers the children in the container */
+  justify-content: flex-start; /* This aligns children (e.g., logo) to the left */
+  height: 100px;
+  background-color: black;
+  color: white;
+}
+
+.header-logo {
+  height: 50px; /* Adjust the logo height as needed */
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
