@@ -1,4 +1,4 @@
-import "@assets/styles/pages/DetailsPage.css";
+import "assets/styles/pages/DetailsPage.css";
 
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";

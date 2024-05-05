@@ -1,9 +1,9 @@
-import "@assets/styles/components/LoadingScreen.css";
+import "assets/styles/components/LoadingScreen.css";
 
 const LoadingScreen = () => {
   return (
-    <div className="loading-screen">
-      <div className="loading-spinner"></div>
+    <div data-testid="loading-screen" className="loading-screen">
+      <div data-testid="loading-spinner" className="loading-spinner"></div>
     </div>
   );
 };

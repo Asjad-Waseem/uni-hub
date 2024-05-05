@@ -1,4 +1,4 @@
-import "@assets/styles/sections/ListingSection.css";
+import "assets/styles/sections/ListingSection.css";
 
 import { UniversityCard } from "@components";
 import { University } from "types/commonTypes";

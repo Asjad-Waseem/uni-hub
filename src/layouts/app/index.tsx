@@ -1,4 +1,4 @@
-import "@assets/styles/App.css";
+import "assets/styles/global/index.css";
 
 import { Header, Footer } from "@components";
 import Router from "routes";

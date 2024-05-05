@@ -1,15 +1,16 @@
-import "@assets/styles/components/Header.css";
+import "assets/styles/components/Header.css";
 
 import { Link } from "react-router-dom";
 
 import { UI_LABELS } from "constants";
-import UniHub from "@assets/logos/uni-hub.png";
+import UniHub from "assets/logos/uni-hub.png";
 
 const Header = (): JSX.Element => {
   const { headerTitle } = UI_LABELS;
   return (
-    <div className="header">
+    <div className="header" data-testid="header">
       <Link
+        data-testid="header-link"
         to="/"
         style={{
           display: "flex",
@@ -18,8 +19,13 @@ const Header = (): JSX.Element => {
           alignItems: "center",
         }}
       >
-        <img className="header-logo" src={UniHub} alt="img-alt" />
-        <h3>{headerTitle}</h3>
+        <img
+          data-testid="header-logo"
+          className="header-logo"
+          src={UniHub}
+          alt="header-logo-alt"
+        />
+        <h3 data-testid="header-title">{headerTitle}</h3>
       </Link>
     </div>
   );

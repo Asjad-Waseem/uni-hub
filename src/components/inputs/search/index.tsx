@@ -1,4 +1,4 @@
-import "@assets/styles/components/Searchbar.css";
+import "assets/styles/components/Searchbar.css";
 
 import { SearchBarProps } from "./types";
 import { UI_LABELS } from "constants";
@@ -14,17 +14,26 @@ const SearchBar = ({
     <div className={`search-wrapper ${isActive ? "active" : ""}`}>
       <div className="input-holder">
         <input
+          data-testid="search-input"
           type="text"
           className="search-input"
           placeholder={typeToSearch}
           value={searchValue}
           onChange={handleChange}
         />
-        <button className="search-icon" onClick={toggleSearch}>
+        <button
+          data-testid="toggle-search-button"
+          className="search-icon"
+          onClick={toggleSearch}
+        >
           <span></span>
         </button>
       </div>
-      <span className="close" onClick={toggleSearch}></span>
+      <span
+        data-testid="close-search-button"
+        className="close"
+        onClick={toggleSearch}
+      ></span>
     </div>
   );
 };

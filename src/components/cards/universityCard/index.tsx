@@ -1,4 +1,4 @@
-import "@assets/styles/components/UniversityCard.css";
+import "assets/styles/components/UniversityCard.css";
 
 import { Link } from "react-router-dom";
 

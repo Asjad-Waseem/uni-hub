@@ -23,7 +23,6 @@
     "baseUrl": "./src",
     "paths": {
       "@api/*": ["api/*"],
-      "@assets/*": ["assets/*"],
       "@components": ["components/index"], // Points directly to the index file
       "@components/*": ["components/*/index", "components/*"],
       "@pages": ["pages/index"],

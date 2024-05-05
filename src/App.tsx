@@ -1,4 +1,4 @@
-import "@assets/styles/App.css";
+import "assets/styles/global/App.css";
 
 import { BrowserRouter } from "react-router-dom";
 import { AppLayout } from "layouts";

@@ -1,4 +1,4 @@
-import "@assets/styles/components/Footer.css";
+import "assets/styles/components/Footer.css";
 
 import { UI_LABELS } from "constants";
 

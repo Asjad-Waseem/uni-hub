@@ -1,4 +1,4 @@
-import "@assets/styles/pages/ListingPage.css";
+import "assets/styles/pages/ListingPage.css";
 
 import React, { useState, useEffect, ChangeEvent } from "react";
 
