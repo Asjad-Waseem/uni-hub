@@ -1,6 +1,7 @@
-import "@assets/styles/Header.css";
+import "@assets/styles/components/Header.css";
 
 import { Link } from "react-router-dom";
+
 import UniHub from "@assets/logos/uni-hub.png";
 
 const Header = (): JSX.Element => {

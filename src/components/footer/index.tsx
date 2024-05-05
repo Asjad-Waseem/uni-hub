@@ -1,4 +1,4 @@
-import "@assets/styles/Footer.css";
+import "@assets/styles/components/Footer.css";
 
 const Footer = (): JSX.Element => {
   const date = new Date();

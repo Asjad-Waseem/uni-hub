@@ -1,0 +1,20 @@
+.listing-page {
+  /* Parent child nested relationship new method in css to style elements */
+  &.title {
+    padding-top: 20px;
+  }
+  &.sort-btn {
+    margin-top: 15px;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgb(247, 247, 250);
+    }
+  }
+}

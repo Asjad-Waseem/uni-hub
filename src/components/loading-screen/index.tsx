@@ -1,4 +1,4 @@
-import "./index.css";
+import "@assets/styles/components/LoadingScreen.css";
 
 const LoadingScreen = () => {
   return (

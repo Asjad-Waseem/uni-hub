@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+.main {
+  min-height: 100vh;
+  background-color: rgb(247, 247, 250);
+}

@@ -27,9 +27,10 @@
       "@components": ["components/index"], // Points directly to the index file
       "@components/*": ["components/*/index", "components/*"],
       "@constants/*": ["constants/*"],
-      "@pages": ["pages/index"], // Points directly to the index file
+      "@pages": ["pages/index"],
       "@pages/*": ["pages/*/index", "pages/*"], // Handles nested index.tsx and other files
-      "@sections/*": ["sections/*"],
+      "@sections": ["sections/index"],
+      "@sections/*": ["sections/*/index", "sections/*"],
       "@utils/*": ["utils/*"]
     }
   },
