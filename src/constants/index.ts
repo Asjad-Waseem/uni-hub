@@ -30,6 +30,7 @@ export const UI_MESSAGES = {
   },
   INFO: {
     loadingUniversityDetails: "Loading university details...",
+    noUniversitiesFoundText: "No universities found!",
   },
 };
 
