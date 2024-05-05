@@ -30,6 +30,7 @@ const UniversityCard = ({
 
   return (
     <div
+      data-testid={`university-card-${index}`}
       className={`university-card ${university.deleting ? "fade-out" : ""} ${
         showDetailedView ? "university-card-expanded" : "university-card-list"
       } `}
@@ -75,6 +76,7 @@ const UniversityCard = ({
       {!showDetailedView && (
         <div className="university-card-actions">
           <Link
+            data-testid={`view-details-${index}`}
             to={`/university-details/${index}`}
             className="details-link"
             onClick={handleViewDetails}
@@ -82,6 +84,7 @@ const UniversityCard = ({
             {viewDetails}
           </Link>
           <button
+            data-testid={`delete-btn-${index}`}
             className="delete-btn"
             onClick={() => handleClick(university?.name)}
           >

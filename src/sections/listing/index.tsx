@@ -1,6 +1,6 @@
 import "assets/styles/sections/ListingSection.css";
 
-import { UniversityCard } from "@components";
+import UniversityCard from "@components/cards/universityCard";
 import { University } from "types/commonTypes";
 import { UniversitiesList } from "./types";
 
@@ -9,7 +9,7 @@ const ListingSection = ({
   handleClick,
 }: UniversitiesList): JSX.Element => {
   return (
-    <div className="listing-container">
+    <div data-testid="listing-container" className="listing-container">
       {universitiesList.map((university: University, index: number) => (
         <UniversityCard
           key={index}

@@ -4,11 +4,13 @@ import { UI_MESSAGES, STORAGE_KEYS } from "constants";
 
 class UniversitiesService {
   static async fetchUniversitiesList() {
-    const { CONSOLE_LOGS, ERRORS } = UI_MESSAGES;
+    // const { CONSOLE_LOGS } = UI_MESSAGES;
+
+    // const { CONSOLE_LOGS, ERRORS } = UI_MESSAGES;
     const { universitiesList } = STORAGE_KEYS;
     try {
       const response = await axiosInstance.get("");
-      console.log(CONSOLE_LOGS.apiResponse, response);
+      console.log(UI_MESSAGES.CONSOLE_LOGS.apiResponse, response);
 
       // Save the fetched data to local storage if the API call is successful
       localStorage.setItem(universitiesList, JSON.stringify(response.data));
@@ -21,7 +23,7 @@ class UniversitiesService {
         return JSON.parse(cachedData); // Return cached data if available
       } else {
         // If no cached data is available, throw an error
-        throw new Error(ERRORS.fetchUniversitiesNoCacheFailure);
+        throw new Error(UI_MESSAGES.ERRORS.fetchUniversitiesNoCacheFailure);
       }
     }
   }
