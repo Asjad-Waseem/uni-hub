@@ -1,0 +1,6 @@
+.details-page {
+  /* Parent child nested relationship new method in css to style elements */
+  &.title {
+    padding-top: 20px;
+  }
+}

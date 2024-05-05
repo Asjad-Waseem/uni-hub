@@ -8,9 +8,13 @@ import { University } from "types/commonTypes";
 import { UniversitiesService } from "@api/services";
 import useDebounce from "hooks/useDebounce";
 import useSortableData from "hooks/useSortableData";
+import { UI_LABELS, UI_MESSAGES } from "constants";
 
 const ListingPage = (): JSX.Element => {
   const { fetchUniversitiesList } = UniversitiesService;
+
+  const { listingPageTitle, sortUniversities, unsortUniversities } = UI_LABELS;
+  const { ERRORS } = UI_MESSAGES;
 
   const [universitiesList, setUniversitiesList] = useState<University[]>([]);
   const [displayUniversityList, setDisplayUniversityList] = useState<
@@ -30,7 +34,7 @@ const ListingPage = (): JSX.Element => {
       setUniversitiesList(data);
       setDisplayUniversityList(data);
     } catch (err) {
-      console.error("Failed to fetch universities data:", err);
+      console.error(ERRORS.fetchUniversitiesFailure, err);
     }
   };
 
@@ -82,7 +86,7 @@ const ListingPage = (): JSX.Element => {
 
   return (
     <div className="listing-page">
-      <h1 className="listing-page title">Universities List</h1>
+      <h1 className="listing-page title">{listingPageTitle}</h1>
       <button
         className="listing-page sort-btn"
         onClick={() => {
@@ -90,7 +94,7 @@ const ListingPage = (): JSX.Element => {
           setIsSorted(!isSorted);
         }}
       >
-        {isSorted ? "Unsort Universities" : "Sort Universities Alphabetically"}
+        {isSorted ? unsortUniversities : sortUniversities}
       </button>
       <SearchBar
         isActive={isActive}

@@ -3,17 +3,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  margin: 10px;
-  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s;
-  height: 210px;
   width: 100%;
-  max-width: 320px;
   box-sizing: border-box;
+}
+
+.university-card-list {
+  display: flex;
+  height: 210px;
+  max-width: 320px;
+  margin: 10px;
+  padding: 20px;
+  max-width: 400px;
+}
+
+.university-card-expanded {
+  width: 95%;
+  margin: 20px auto 0 auto;
 }
 
 .university-card:hover {
@@ -49,9 +58,13 @@
   margin-bottom: 8px;
 }
 
-.university-code {
+.university-property {
   font-size: 1em;
   color: #666;
+}
+
+.mt-1 {
+  margin-top: 8px;
 }
 
 .details-link {

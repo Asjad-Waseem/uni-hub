@@ -45,3 +45,7 @@
   min-height: 100vh;
   background-color: rgb(247, 247, 250);
 }
+
+.font-bold {
+  font-weight: bold;
+}

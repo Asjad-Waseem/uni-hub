@@ -12,6 +12,7 @@ const ListingSection = ({
     <div className="listing-container">
       {universitiesList.map((university: University, index: number) => (
         <UniversityCard
+          key={index}
           index={index}
           university={university}
           handleClick={() => handleClick(university.name)}
