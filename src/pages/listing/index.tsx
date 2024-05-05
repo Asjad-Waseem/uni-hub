@@ -78,10 +78,12 @@ const ListingPage = (): JSX.Element => {
       )
     );
     setDisplayUniversityList(filteredList);
+    // eslint-disable-next-line
   }, [debouncedSearchTerm, universitiesList, isSorted]);
 
   useEffect(() => {
     getUniversitiesList();
+    // eslint-disable-next-line
   }, []);
 
   return (

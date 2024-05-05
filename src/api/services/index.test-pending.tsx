@@ -30,14 +30,14 @@ jest.mock("constants", () => ({
 
 // Improved Mock local storage
 beforeEach(() => {
-  // @ts-ignore
+  // @ts-expect-error need to add node to ts config.json modules to allow the usage of global object
   global.localStorage = {
     store: {},
-    // @ts-ignore
+    // @ts-expect-error type to be assigned
     getItem(key) {
       return this.store[key] || null;
     },
-    // @ts-ignore
+    // @ts-expect-error type to be assigned
     setItem(key, value) {
       this.store[key] = value.toString();
     },

@@ -4,7 +4,7 @@ import { LoadingScreen } from "@components";
 
 // Define a generic type for props
 const Loadable =
-  <P extends {}>(Component: ComponentType<P>) =>
+  <P extends object>(Component: ComponentType<P>) =>
   (props: P): ReactNode =>
     (
       <Suspense fallback={<LoadingScreen />}>

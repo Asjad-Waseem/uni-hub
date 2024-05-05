@@ -25,6 +25,7 @@ const DetailsPage = (): JSX.Element => {
       // Handle cases where no data is available
       navigate("/"); // Redirect back to the list if no data is found
     }
+    // eslint-disable-next-line
   }, [navigate]);
 
   if (!university) {

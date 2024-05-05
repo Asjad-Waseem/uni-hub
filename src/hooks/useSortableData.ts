@@ -2,22 +2,25 @@ import { useMemo, useState } from "react";
 
 import { SortConfig } from "./types";
 
-function useSortableData<T>(items: T[], defaultKey: string): [T[], () => void] {
-  const [sortConfig, setSortConfig] = useState<SortConfig>({
+function useSortableData<T extends object>(
+  items: T[],
+  defaultKey: keyof T
+): [T[], () => void] {
+  const [sortConfig, setSortConfig] = useState<SortConfig<T>>({
     key: defaultKey,
     direction: "ascending",
   });
 
   const sortedItems = useMemo(() => {
-    let sortableItems = [...items];
-    if (sortConfig !== null) {
+    const sortableItems = [...items];
+    if (sortConfig) {
       sortableItems.sort((a, b) => {
-        // @ts-ignore
-        if (a[sortConfig.key] < b[sortConfig.key]) {
+        const aValue = a[sortConfig.key];
+        const bValue = b[sortConfig.key];
+        if (aValue < bValue) {
           return sortConfig.direction === "ascending" ? -1 : 1;
         }
-        // @ts-ignore
-        if (a[sortConfig.key] > b[sortConfig.key]) {
+        if (aValue > bValue) {
           return sortConfig.direction === "ascending" ? 1 : -1;
         }
         return 0;
